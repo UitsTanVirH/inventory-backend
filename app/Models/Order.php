@@ -16,7 +16,9 @@ class Order extends Model
      */
     protected $fillable = ['name', 'quantity', 'cost', 'status'];
 
-    public $timestamps = false;
+    // public $timestamps = false;
+    // protected $dateFormat = 'U';
+    protected $dateFormat = 'Y/m/d H:i:s';
 
     public function item()
     {

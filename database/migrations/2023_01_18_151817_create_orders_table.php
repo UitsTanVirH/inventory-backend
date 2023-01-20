@@ -20,6 +20,7 @@ return new class extends Migration
             $table->integer('quantity');
             $table->integer('cost');
             $table->boolean('status');
+            $table->timestamps();
         });
     }
 
