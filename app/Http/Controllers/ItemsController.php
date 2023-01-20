@@ -66,9 +66,16 @@ class ItemsController extends Controller
      * @param  \App\Models\Item  $item
      * @return \Illuminate\Http\Response
      */
-    public function show(Item $item)
+    public function show($id)
     {
-        //
+        // use the $id variable to query the db for a record
+        $item = Item::findOrFail($id);
+
+        return response()->json([
+            "success" => true,
+            "message" => "Item Get successfully.",
+            "data" =>$item
+        ]);
     }
 
     /**
